@@ -54,7 +54,9 @@
       "pages": [
         "introduction",
         "quickstart",
-        "development"
+        "development",
+        "stats",
+        "partner"
       ]
     },
     {
