@@ -39,12 +39,12 @@
     },
     {
       "name": "Preise",
-      "icon": "slack",
+      "icon": "euro-sign",
       "url": "https://digistats.de/pricing"
     },
     {
       "name": "Changelog",
-      "icon": "newspaper",
+      "icon": "list-ul",
       "url": "https://digistats.de/changelog"
     }
   ],
