@@ -60,6 +60,16 @@
       ]
     },
     {
+      "group": "KK",
+      "pages": [
+        "introduction",
+        "quickstart",
+        "development",
+        "stats",
+        "partner"
+      ]
+    },
+    {
       "group": "Essentials",
       "pages": [
         "essentials/markdown",
