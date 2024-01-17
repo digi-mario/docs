@@ -1,0 +1,214 @@
+---
+title: 'Statistik'
+description: 'Description of your new file.'
+---
+# Funktionen
+
+## Bounce-Rate
+
+In digistats Analytics ist die Absprungrate (Bounce Rate) eine wichtige Metrik, die den Prozentsatz der Besucher angibt, die deine Website nach dem Betrachten nur einer einzigen Seite verlassen, ohne weitere Aktionen durchzuführen. Diese Statistik ist entscheidend, um das Engagement und die Effektivität deiner Website zu verstehen. Hier erfährst du, wie die Absprungrate gemessen wird und was sie für deine Website bedeutet.
+
+### Was ist die Absprungrate?
+
+Die Absprungrate wird als Prozentsatz ausgedrückt und zeigt an, wie viele Besuche auf deiner Seite in nur einer einzigen Ansicht resultieren, ohne dass der Benutzer weitere Seiten besucht oder mit der Seite interagiert hat. Eine hohe Absprungrate könnte darauf hinweisen, dass die Seite nicht das bietet, was die Besucher erwarten oder suchen, oder dass die Benutzererfahrung nicht optimal ist.
+
+### Wie wird die Absprungrate berechnet?
+
+In digistats Analytics wird die Absprungrate berechnet, indem die Anzahl der Einzelseitenbesuche durch die Gesamtzahl der Besuche geteilt wird. Das Ergebnis wird dann in Prozent angegeben.
+
+``` html
+Absprungrate = (Einzelseitenbesuche / Gesamtbesuche) * 100
+```
+
+### Warum ist die Absprungrate wichtig?
+
+- **Benutzererfahrung:** Eine hohe Absprungrate könnte ein Indikator für Probleme mit der Benutzererfahrung sein, wie z.B. unzureichendes Design, verwirrende Navigation oder langsames Laden der Seite.
+- **Inhaltsrelevanz:** Sie kann auch anzeigen, dass der Inhalt der Seite nicht relevant oder ansprechend genug für die Besucher ist.
+- **Zielgruppenverständnis:** Die Absprungrate hilft dir, besser zu verstehen, ob du die richtige Zielgruppe erreichst und ob deine Seite deren Bedürfnisse erfüllt.
+
+### Hinweise zur Interpretation
+
+- **Nicht immer negativ:** Eine hohe Absprungrate ist nicht immer negativ. Zum Beispiel, wenn eine Seite alle notwendigen Informationen bietet und der Besucher zufrieden ist, könnte er die Seite verlassen, ohne weiter zu navigieren.
+- **Kontext betrachten:** Es ist wichtig, die Absprungrate im Kontext zu betrachten. Vergleiche sie mit anderen Metriken und ziehe externe Faktoren in Betracht, wie die Art des Traffics und das Ziel der Seite.
+
+Die Absprungrate ist ein kraftvolles Werkzeug in deiner Analyse-Arsenal. Sie bietet wertvolle Einblicke in das Verhalten und die Vorlieben deiner Besucher. Durch das Verständnis und die Optimierung der Absprungrate kannst du die Leistung deiner Website verbessern und ein besseres Erlebnis für deine Besucher schaffen.
+
+## QR Code Tracking
+
+#### Messe und optimiere den Erfolg deiner QR-Code-Kampagnen, um das Beste aus deiner Marketingstrategie herauszuholen.
+
+QR Codes können mit UTM Codes gemessen werden. Diese sind Parameter-Strings, die zu URLs hinzugefügt werden können, um den Aufruf eines QR Codes zu messen.
+
+Mit dem Parameter `utm_source=qr` kann ein QR Code getrackt werden, indem der Parameter an die URL angehängt wird, die der QR-Code verlinkt. Wenn eine Person den QR-Code scannt und auf die verlinkte URL klickt, wird der Parameter in der Statistik der Website gespeichert.
+
+#### Beispiel einer URL für das QR Code Tracking
+
+``` html
+https://digistats.de/?utm_source=qr&utm_campaign=Visitenkarte
+``` 
+
+``` html
+https://digistats.de/shop/produkt/?utm_source=qr&utm_campaign=Visitenkarte-Max
+``` 
+
+Der Parameter `utm_campaign` gibt an, dass der Traffic im Zusammenhang mit einer Marketingkampagne mit dem festgelegten Namen steht.
+
+Die Parameter können in jede URL und Subdomain angehängt werden, um den Traffic auf der Website zu verfolgen. Es ist jedoch wichtig zu beachten, dass die Parameter korrekt und eindeutig definiert werden müssen, damit sie für die Analyse der Marketingkampagnen effektiv sind.
+
+## Sichtbarkeit der Statistik
+
+### Öffentliche Statistik
+
+Du kannst das Dashboard deiner Domain öffentlich teilen, indem du die Einstellung in den Domain-Einstellungen aktivierst. Es wird eine einzigartige URL generiert, die nur für die Personen verfügbar ist, mit denen du sie teilst. Dies ist nicht passwortgeschützt.
+
+1. Navigiere dazu zu der jeweiligen Domain in deinem Dashboard und klicke auch "**Bearbeiten**".
+2. Wähle unter "**Sichtbarkeit**" die "**Öffentliche Statistik**" aus:
+
+![](/img/screenshot/public.png)
+
+3. Klicke auf "**Speichern**".
+4. Die Statistik kann nun unter "**www.digistats.de/domain**" öffentlich eingesehen werden.
+
+::: tip INFO
+Öffentliche Statistiken werden nicht durch Suchmaschinen erfasst oder indexiert. 
+:::
+
+### Passwortgeschützte Statistiken
+
+Passwortgeschützte Statistiken können nur durch die Eingabe von deinem benutzerdefinierten Passworts eingesehen werden. 
+
+Um eine passwortgeschützte Statistik einzurichten, gehe wie folgt vor:
+
+1. Navigiere dazu zu der jeweiligen Domain in deinem Dashboard und klicke auch "**Bearbeiten**".
+2. Wähle unter "**Sichtbarkeit**" die "**Passwortgeschützte Statistik**" aus:
+
+![](/img/screenshot/password.png)
+
+3. Wähle ein von dir gewünschtes Passwort aus.
+4. Bestätige das Passwort indem du auf "**Speichern**" drückst.
+5. Die Statistik kann nun unter "**www.digistats.de/domain**" aufgerufen werden.
+6. Wenn eine passwortgeschützte Statistik aufgerufen wird, muss das von dir ausgewählte Passwort eingegeben werden:
+
+![](/img/screenshot/password2.png)
+
+7. Nach Eingabe des von dir festgelegten Passworts, wird die Statistik angezeigt.
+
+## Events
+
+#### Events messen Klicks auf Links, Buttons, Videos etc. Indem Events getrackt werden, kann man die Aktivität auf einer Website genauer analysieren und verstehen, wie Benutzer mit der Seite interagieren.
+
+Events können mit der `pa.track()` JavaScript-Funktion nachverfolgt werden.
+
+Die `pa.track()` Funktion nimmt ein Objekt als Argument an. Das Objekt muss einen Schlüssel namens name enthalten.
+
+Zusätzlich können die Werte `value` und `unit` zur Nachverfolgung eingebunden werden.
+
+``` javascript
+pa.track({name: 'Shop'})
+pa.track({name: 'Shop', value: 5, unit: 'EUR'})
+```
+
+#### Beispiel eines JavaScript-Codes
+
+``` javascript
+<a href="#" onclick="pa.track({name: 'Shop', value: 5, unit: 'EUR'})">Shop</a>
+```
+
+Dieser JavaScript-Code führt eine Funktion namens pa.track() aus, wenn ein Benutzer auf ein HTML-Element klickt.
+
+Die Funktion `pa.track()` wird aufgerufen und ein JavaScript-Objekt wird als Parameter übergeben. Das Objekt enthält drei Eigenschaften:
+
+`name` Der Name des Ereignisses, das getrackt werden soll. Im Beispiel ist es "Shop", was bedeuten könnte, dass der Klick mit einem Einkauf zusammenhängt.
+
+`value` Der numerische Wert des Ereignisses. Im Beispiel ist der Wert 5, was bedeuten könnte, dass der Benutzer einen Einkauf im Wert von 5 EUR getätigt hat.
+
+`unit` Die Einheit des Wertes. Im Beispiel ist es "EUR", was die Währung angibt.
+
+Mit diesen Informationen kannst du beispielsweise analysieren, wie oft ein bestimmtes Element auf einer Seite geklickt wurde und wie viel Umsatz dadurch generiert wurde.
+
+## Standort
+
+Jede Anfrage, die der Browser eines Besuchers stellt, egal wo im Web, sendet eine IP-Adresse. Wir konvertieren diese Adresse während der Übertragung (innerhalb des Arbeitsspeichers des Servers) in einen ISO-Ländercode, ohne weitere Detaillierung. Wir speichern nur den Code – die IP-Adresse wird verworfen und nie innerhalb von digistats Analytics protokolliert.
+
+## Engagement-Muster (Beta)
+
+Unser Engagement-Muster ist ein Werkzeug, das dir wertvolle Einsichten in das Besucheraufkommen deiner Website nach Wochentagen bietet. Diese Funktion ist besonders nützlich, um Muster im Besucherverhalten zu erkennen und zu verstehen, an welchen Tagen deine Inhalte die höchste Aufmerksamkeit erzielen. So kannst du deine Inhaltsstrategie und Veröffentlichungsplanung optimieren.
+
+![](/img/screenshot/screely-1704229597333.png)
+
+#### Funktionsweise
+Die Wochentagsanalyse visualisiert das Besucheraufkommen und die Seitenaufrufe, um zu identifizieren, an welchen Tagen die Aktivität auf deiner Seite am höchsten ist. Sie zeigt dir:
+
+- **Spitzenverkehrstage**: Ermittle schnell, an welchen Tagen deine Website die höchsten Besucherzahlen verzeichnet.
+- **Seitenaufrufe**: Sieh dir an, welche Tage die meisten Seitenaufrufe erhalten, was darauf hindeuten kann, wann deine Inhalte am meisten konsumiert werden.
+
+#### Nutzungshinweis
+Um Zugang zu dieser Analyse zu erhalten, navigiere im Dashboard zum Abschnitt 'Statistiken'. Dort findest du das Engagement-Muster, das dir eine übersichtliche Grafik bereitstellt. Beachte, dass dieses Feature noch in der Beta-Phase ist und ständig weiterentwickelt wird, um dir noch genauere und nützlichere Daten zu liefern.
+
+## Sitzungsdauer
+
+Die Sitzungsdauer-Statistik ist ein kritischer Indikator für das Engagement auf deiner Website. Sie misst die durchschnittliche Zeit, die ein Besucher auf deiner Seite verbringt, und wird in Minuten und Sekunden dargestellt. Diese Metrik hilft dir zu verstehen, wie gut deine Inhalte das Interesse der Besucher halten.
+
+Durch die effektive Nutzung der Sitzungsdauer-Statistik kannst du fundierte Entscheidungen treffen, um die Leistung deiner Website kontinuierlich zu verbessern und ein besseres Nutzererlebnis zu schaffen.
+
+#### Warum ist Sitzungsdauer wichtig?
+Die durchschnittliche Sitzungsdauer bietet wertvolle Einblicke in mehrere Aspekte deiner Website:
+
+- **Engagement:**
+Längere Sitzungen bedeuten in der Regel, dass Besucher mit deinen Inhalten beschäftigt sind. Sie lesen deine Artikel, schauen sich Produkte an oder interagieren auf andere Weise mit deiner Seite.
+- **Inhaltsqualität:**
+Die Verweildauer kann ein Indikator für die Qualität und Relevanz deiner Inhalte sein. Hochwertige, ansprechende Inhalte führen oft zu längeren Sitzungen.
+- **Benutzererfahrung:**
+Eine benutzerfreundliche Website, die leicht zu navigieren ist, kann ebenfalls zu längeren Sitzungsdauern beitragen.
+
+### Messung der Sitzungsdauer
+
+Die Sitzungsdauer wird erfasst, indem die Zeit zwischen dem Betreten der Website und der letzten Aktivität des Besuchers gemessen wird. Diese Daten werden dann aggregiert, um den Durchschnitt über alle Besuche hinweg zu berechnen. Die Messung der Sitzungsdauer erfolgt durch einen präzisen Mechanismus, der in unseren Tracking-Code integriert ist. Der Kern dieses Mechanismus ist ein Timer, der aktiviert wird, sobald ein Besucher deine Website betritt. 
+
+Hier ist, wie dieser Prozess funktioniert:
+
+**1. Besucher betritt die Website:**
+Sobald ein Benutzer deine Seite lädt, initialisiert der Tracking-Code einen Timer. Dies markiert den Beginn der Sitzung.
+
+**2. Benutzeraktivität:**
+Während der Benutzer auf der Website navigiert, bleibt der Timer aktiv. Jede Interaktion des Benutzers mit der Seite (wie das Klicken auf Links, das Scrollen oder das Eingeben von Informationen) wird erfasst und zurückgesetzt oder aktualisiert den Timer, um die fortlaufende Aktivität zu reflektieren.
+
+**3. Ende der Sitzung:**
+Die Sitzung endet, wenn der Benutzer die Website verlässt oder über einen bestimmten Zeitraum inaktiv ist. Der Timer stoppt, und die Gesamtzeit der Sitzung wird berechnet.
+
+**4. Datenübermittlung und Analyse:**
+Die gesammelte Zeit wird an unsere Server übermittelt, wo sie verarbeitet und in deine Statistiken aufgenommen wird. Diese Daten werden dann aggregiert, um die durchschnittliche Sitzungsdauer aller Besucher zu berechnen.
+
+::: tip INFO
+Um die Genauigkeit der Sitzungsdauermessung zu gewährleisten und realistische Daten zu liefern, haben wir eine wichtige Beschränkung in unseren Tracking-Mechanismus integriert: Der Timer zählt maximal 30 Minuten pro Sitzung. 
+:::
+
+### Anwendungen
+
+- **Inhaltsstrategie**: Verwende die Sitzungsdauer, um zu beurteilen, welche Inhalte am ansprechendsten sind und optimiere oder erweitere sie entsprechend.
+- **Marketingkampagnen**: Bewerte, ob Änderungen in deiner Marketingstrategie zu längeren Sitzungen führen und somit erfolgreicher sind.
+- **Design & Navigation**: Erkenne, ob Verbesserungen an der Website-Navigation oder am Design die Verweildauer positiv beeinflussen.
+
+### Hinweis zur Nutzung
+
+- **Datenschutz**: Unser Tracking-Code respektiert die Privatsphäre deiner Besucher. Es werden keine persönlich identifizierbaren Informationen gesammelt, und alle Daten werden anonym verarbeitet.
+- **Genauigkeit**: Der Timer ist so konzipiert, dass er präzise und minimal invasiv ist, was bedeutet, dass er die Website-Leistung nicht beeinträchtigt und genaue Daten liefert.
+- **Dynamische Anpassung**: Der Timer passt sich dynamisch an das Verhalten des Benutzers an, um die genauesten Ergebnisse zu erzielen.
+
+Durch die Verwendung dieses fortgeschrittenen Timers können wir die Verweildauer auf deiner Website genau messen und dir wertvolle Einblicke in das Engagement deiner Besucher liefern. Diese Informationen sind entscheidend für die Optimierung deiner Inhalte, die Verbesserung der Benutzererfahrung und letztendlich für den Erfolg deiner Website.
+
+## Monitoring (Status)
+
+Die Monitoring- oder Statusfunktion in digistats Analytics bietet eine kontinuierliche Überwachung der Erreichbarkeit deiner Website. Durch regelmäßige Überprüfungen, die jede Stunde durchgeführt werden, kannst du den aktuellen Status deiner Website einsehen und schnell auf etwaige Probleme reagieren. Hier ist, wie diese Funktion funktioniert und was die verschiedenen Statusfarben bedeuten.
+
+### Überblick
+Das Monitoring-System von digistats Analytics prüft stündlich, ob deine Website erreichbar ist. Diese Überprüfungen sind entscheidend, um sicherzustellen, dass deine Website für Benutzer zugänglich bleibt und etwaige Ausfallzeiten minimiert werden.
+
+### Statusanzeigen
+Die Ergebnisse der Überprüfungen werden in deinem Dashboard angezeigt und verwenden ein farbcodiertes System, um den Status deiner Website schnell und intuitiv zu kommunizieren:
+
+- **Grün (Online):** Deine Website ist erreichbar und funktioniert normal. Besucher können die Seite ohne Probleme besuchen.
+- **Gelb (Nicht verfügbar):** Es gibt möglicherweise vorübergehende Probleme beim Zugriff auf deine Website. Dies könnte auf Überlastung, temporäre Netzwerkprobleme oder andere nicht kritische Probleme hinweisen.
+- **Rot (Offline):** Deine Website ist nicht erreichbar. Dies deutet auf einen kritischen Fehler oder Ausfall hin, der sofortige Aufmerksamkeit erfordert.
+
+Die Monitoring-Funktion in digistats Analytics ist ein unverzichtbares Werkzeug, um die Gesundheit und Verfügbarkeit deiner Website zu überwachen. Indem du informiert bleibst und schnell auf Probleme reagierst, kannst du die Zuverlässigkeit deiner Website sicherstellen und ein qualitativ hochwertiges Erlebnis für deine Besucher bieten.
