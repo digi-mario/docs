@@ -7,7 +7,7 @@
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
+    "primary": "#4E28FF",
     "light": "#07C983",
     "dark": "#0D9373",
     "anchors": {
@@ -27,25 +27,25 @@
   },
   "tabs": [
     {
-      "name": "API Reference",
+      "name": "API Dokumentation",
       "url": "api-reference"
     }
   ],
   "anchors": [
     {
-      "name": "Documentation",
+      "name": "Über uns",
       "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "url": "https://digistats.de/ueber-uns"
     },
     {
-      "name": "Community",
+      "name": "Preise",
       "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "url": "https://digistats.de/pricing"
     },
     {
-      "name": "Blog",
+      "name": "Changelog",
       "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://digistats.de/changelog"
     }
   ],
   "navigation": [
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "API Dokumentation",
       "pages": [
         "api-reference/introduction"
       ]
