@@ -53,19 +53,28 @@
       "group": "Schnellstart",
       "pages": [
         "introduction",
-        "quickstart",
-        "development",
-        "stats",
-        "partner"
+        "register"
       ]
     },
     {
-      "group": "KK",
+      "group": "Dashboard",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development",
         "stats",
+        "account",
+        "addwebsite",
+        "functions",
+        ""
+      ]
+    },
+    {
+      "group": "Integration & Setup",
+      "pages": [
+        "integration"
+      ]
+    },
+    {
+      "group": "Partnerprogramm",
+      "pages": [
         "partner"
       ]
     },
