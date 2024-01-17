@@ -44,7 +44,7 @@
     },
     {
       "name": "Changelog",
-      "icon": "list-ul",
+      "icon": "newspaper",
       "url": "https://digistats.de/changelog"
     }
   ],
@@ -62,8 +62,7 @@
         "stats",
         "account",
         "addwebsite",
-        "functions",
-        ""
+        "functions"
       ]
     },
     {
