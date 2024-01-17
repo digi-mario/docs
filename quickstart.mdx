@@ -3,9 +3,81 @@ title: 'Datenschutz'
 description: 'Erfahre mehr darüber welche Daten wir verarbeiten.'
 ---
 
-## Setup your development
+## Datenschutz
 
-Learn how to update your docs locally and and deploy them to the public.
+Wir legen großen Wert auf den Schutz deiner persönlichen Daten. Daher halten wir uns an die geltenden Gesetze wie dem Datenschutzgesetz (DSG) in der Schweiz und der Datenschutz-Grundverordnung (DSGVO) in der EU. 
+
+digistats Analytics speichert neben den Informationen, die von Browser-Kopfzeilen gesendet werden, auch zusätzliche Daten, die auf Serverseite verarbeitet werden. Dies umfasst beispielsweise die Auswertung von Sessions und Heatmaps, um das Nutzerverhalten auf deiner Website zu analysieren. Hierbei werden anonymisierte Nutzungsdaten erfasst und ausgewertet, um Trends und Verhaltensmuster zu erkennen und die Website-Erfahrung für die Nutzer zu optimieren. Die gesammelten Daten werden ausschließlich für statistische Auswertungen genutzt und dienen zur Verbesserung der Website-Funktionalitäten. 
+
+## Welche Daten wir erfassen
+
+digistats Analytics speichert keine IP-Adressen deiner Besucher. Wir verwenden die IP-Adresse, um den geografischen Standort des Besuchers in Echtzeit zu bestimmen, ohne jedoch die IP-Adresse selbst zu speichern.
+
+| Typ       | Value           | Zweck  |
+| :------------- |:-------------| :-------------|
+| HTTP header      | `Accept-Language` | Wird von Browsern verwendet, um dem Webserver mitzuteilen, welche Sprachen der Benutzer bevorzugt (z.B. "de" für Deutsch). |
+| HTTP header      | `referrer`      |   Der Referer zeigt die URL an, die der Nutzer als letztes besucht hat und von welcher aus er einem Link auf die aktuelle Seite gefolgt ist. |
+| User-Agent | `Viewport-Width`      |    Zeigt die Bildschirmauflösung des Besuchers an. |
+| User-Agent | `browser`      |    Zeigt den verwendeten Browser des Besuchers an. |
+| User-Agent | `platform`      |    Betriebssystem (z.B. Windows, Mac, Linux, Android, etc.) |
+| Geolocation | `city`      |    Zeigt die Stadt des Besuchers an. |
+| Geolocation | `continent`      |    Zeigt den Kontinent des Besuchers an (z.B. Europa). |
+| Geolocation | `country`      |    Zeigt das Land des Besuchers an (z.B. Deutschland). |
+| Events | `event`      |    Zeigt auf welche Links und wie oft ein Besucher geklickt hat. |
+| Einstiegsseiten | `landing_page`      |    Zeigt auf welche Links und wie oft ein Besucher anklickt. |
+| Besucher | `visitors`      |    Zeigt wie viele eindeutige Besucher die Webseite besucht haben. |
+| Uhrzeit | `visitors_hours`      |    Zeigt zu welcher Uhrzeit die Website zum ersten Mal geöffnet wurden. |
+| Seitenansichten | `pageviews`      |    Zeigt wie oft ein eine Seite geöffnet wurde. |
+| Verbindungstyp | `connection_type`      |    Zeigt an, ob ein Besucher über langsamere 2G-Verbindungen oder schnellere 4G-Netzwerke auf eine Webseite zugreift. |
+| Uhrzeit | `pageviews_hours`      |    Zeigt zu welcher Uhrzeit bestimmte Webseiten geöffnet wurden. |
+| Suchmaschinen | `search_engines`      |    Zeigt über welche Suchmaschine auf eine Webseite zugegriffen wurde. |
+| Soziale Netzwerke | `social_networks`      |    Zeigt über welche Soziale Netzwerke auf eine Webseite zugegriffen wurde. |
+| Sessions | `sessions`      |    Eine Session bezieht sich auf die Zeit, die du auf einer Website verbringst, von dem Moment an, wenn du die Website besuchst, bis zu dem Zeitpunkt, wenn du sie verlässt. |
+| Heatmaps | `heatmap-track`      |    Heatmaps sind eine visuelle Darstellung, die uns zeigt, welche Bereiche einer Website von den Besuchern am häufigsten angesehen oder angeklickt werden. Diese Funktion ist nicht standardmäßig aktiviert, sondern nur, wenn der Website-Inhaber sie explizit aktiviert. |
+
+Dies geschieht durch eine automatische interne Datenbankabfrage, die den geografischen Standort des Geräts oder Besuchers identifiziert. Dabei werden keine personenbezogenen Daten gespeichert, sondern nur der ungefähre Standort des Besuchers ermittelt. 
+
+Dies ist wichtig, um aussagekräftige Daten über die Besucher deiner Website zu erhalten, ohne dabei die Privatsphäre deiner Besucher zu gefährden.
+
+Weitere Informationen zum Datenschutz findest du in unserer [Datenschutzerklärung](https://digistats.de/datenschutz).
+
+## Die gesammelten Daten
+
+Bei digistats Analytics haben wir unsere eigene Methode zur Erkennung eindeutiger Besucher entwickelt, die nicht auf eindeutigen Kennungen, IP-Adressen oder Fingerabdrücken basiert. In unseren Tests stellten wir fest, dass sie die zuverlässigste, sicherste und genaueste verfügbare Methode ist. 
+
+Hier ist eine kurze Erklärung:
+
+Jedes Mal, wenn ein Besucher digistats Analytics anpingt, wird dies in seinem Browser gespeichert, genau wie jede andere Anfrage, wie zum Beispiel ein GIF, eine Schriftart oder eine CSS-Datei. digistats Analytics setzt einen "Last-Modified"-Header in der Antwort auf den Beginn des aktuellen Tages. Das nächste Mal, wenn die gleiche Anfrage gestellt wird, sendet der Browser automatisch den Header zurück an digistats Analytics, um zu überprüfen, ob die Anfrage noch gültig ist. digistats Analytics modifiziert den "Last-Modified"-Header auf 1 Sekunde später als den vorherigen Wert. Für jede Anfrage kann digistats Analytics dann die Distanz in Sekunden berechnen, die "Last-Modified" vom Beginn des Tages entfernt ist, um zu wissen, wie viele Besuche der Benutzer gemacht hat. Wenn die Anfrage keinen Header hatte, war es ein einzigartiger Besuch.
+
+## Deine Datenschutzerklärung
+
+Es ist nicht notwendig, uns in die Datenschutzerklärung deiner Website aufzunehmen, aber wir empfehlen dir dennoch, dies zu tun, um gegenüber deinen Besuchern so transparent wie möglich zu sein. 
+
+Hier ist eine Vorlage, die du verwenden oder als Inspiration nehmen kannst:
+
+::: warning INFO
+Wir auf example.com nutzen digistats Analytics für die Webanalyse. digistats Analytics sammelt und verarbeitet anonyme Metriken und stellt uns Informationen zur Verfügung, die uns helfen zu verstehen, wie Besucher unsere Website nutzen und woher unser Traffic stammt.
+:::
+
+::: warning INFO
+digistats Analytics ermöglicht es uns, unsere Website zu verbessern und eine bessere Erfahrung für unsere Besucher zu schaffen. Wir verfolgen oder profilieren Besucher nicht und wir schalten keine personalisierte Werbung. Wir teilen diese Daten mit niemandem.
+:::
+
+::: warning INFO
+digistats Analytics ist ein datenschutzfreundliches Werkzeug und sammelt keine persönlichen Daten. Du kannst mehr darüber erfahren, wie digistats Analytics Daten verarbeitet, auf deren Website.
+:::
+
+#### HTML Version
+
+Kopiere diesen Code und füge es direkt in deine Datenschutzerklärung auf deiner Website hinzu:
+
+``` html
+Um Informationen über das Verhalten unserer Besucher zu erhalten, nutzen wir <a href="https://digistats.de" target="_blank">digistats Analytics</a>. Diese Analysesoftware gibt uns Einblicke in unsere Besucher im Allgemeinen, aber nicht über Einzelpersonen per se, da sie Besucher nicht verfolgt und keine persönlich identifizierbaren Informationen speichert. <a href="https://digistats.de/datenschutz" target="_blank">Gehe zu ihrer Datenschutzerklärung</a>, um herauszufinden, was digistats Analytics sammelt (und vor allem, was sie nicht sammeln).
+```
+
+
+
+
 
 ### Edit and preview
 
