@@ -26,5 +26,18 @@ curl --location --request GET 'https://paarky.de/api/v1/stats/{id}?name={name}&f
 | :------------- |:-------------| :-------------|
 | `name`      | `erforderlich` `string` | Der Name der Statistik. Mögliche Werte sind: `browser`, `campaign`, `city`, `continent`, `country`, `device`, `event`, `landing_page`, `language`, `os`, `page`, `pageviews`, `pageviews_hours`, `referrer`, `resolution`, `visitors`, `visitors_hours`, `session_time`.
  |
-
+ | `from`      | `erforderlich` `string` | Das Startdatum `Y-m-d` Format.
+ |
+ | `to`      | `erforderlich` `string` | Das Enddatum im `Y-m-d` Format.
+ |
+ | `search`      | `optional` `string` | Die Suchanfrage.
+ |
+ | `search_by`      | `optional` `string` | Suche nach. Mögliche Werte sind: `value` für Wert. Standardwert: `url`.
+ |
+| `sort_by`      | `optional` `string` | Sortieren nach. Mögliche Werte sind: `count` für Count, `value` für Wert. Standardwert: `count`.
+ |
+ | `sort`      | `optional` `string` | Sortieren. Mögliche Werte sind: `desc` für Absteigend sortieren, `asc` für Aufsteigend sortieren. Standardwert: `desc`.
+ |
+  | `per_page`      | `optional` `int` | Ergebnisse pro Seite. Mögliche Werte sind: `10`, `25`, `50`, `100`. Standardwert: `10`.
+ |
 
