@@ -92,7 +92,8 @@
       "group": "API Dokumentation",
       "pages": [
         "api-reference/introduction",
-        "api-reference/stats"
+        "api-reference/stats",
+        "api-reference/website"
       ]
     },
     {
