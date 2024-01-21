@@ -1,8 +1,7 @@
 ---
 title: 'Statistik'
-description: 'Description of your new file.'
+description: 'Der API-Schlüssel sollte als Bearer-Token im Authorization-Header der Anfrage gesendet werden.'
 ---
-
 
 ### Anzeigen
 
@@ -17,7 +16,7 @@ Die `{id}` der Website findest du in den Einstellungen der jeweiligen Website (z
 #### Beispiel für die Anfragen
 
 ```javascript curl
-curl --location --request GET 'https://paarky.de/api/v1/stats/{id}?name={name}&from={from}&to={to}' \
+curl --location --request GET 'https://digistats.de/api/v1/stats/{id}?name={name}&from={from}&to={to}' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer {api_key}'
 ```
