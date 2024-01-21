@@ -93,7 +93,8 @@
       "pages": [
         "api-reference/introduction",
         "api-reference/stats",
-        "api-reference/website"
+        "api-reference/website",
+        "api-reference/account"
       ]
     },
     {
