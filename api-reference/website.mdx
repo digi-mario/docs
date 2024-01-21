@@ -1,0 +1,133 @@
+---
+title: 'Website'
+description: 'Der API-Schlüssel sollte als Bearer-Token im Authorization-Header der Anfrage gesendet werden.'
+---
+
+### List
+
+API-Endpunkt:
+
+`GET`
+
+```
+https://digistats.de/api/v1/websites
+```
+
+#### Beispiel für die Anfragen
+
+```javascript curl
+curl --location --request GET 'https://digistats.de/api/v1/websites' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer {api_key}'
+```
+
+| Parameter       | Typ          | Beschreibung  |
+| :------------- |:-------------| :-------------|
+| `search`      | `optional` `string` | Die Suchanfrage.|
+| `search_by`      | `optional` `string` | Suche nach. Mögliche Werte sind: `domain` für Domain. Standardwert: `domain`.|
+| `sort_by`      | `optional` `string` | Sortieren nach. Mögliche Werte sind: `id` für Erstellungsdatum, `domain` für Domain. Standardwert: `id`.|
+| `sort`      | `optional` `string` | Sortieren. Mögliche Werte sind: `desc` für Absteigend sortieren, `asc` für Aufsteigend sortieren. Standardwert: `desc`.|
+| `per_page`      | `optional` `int` | Ergebnisse pro Seite. Mögliche Werte sind: `10`, `25`, `50`, `100`. Standardwert: `10`.|
+
+### Anzeigen
+
+API-Endpunkt:
+
+`GET`
+
+```
+https://digistats.de/api/v1/websites/{id}
+```
+
+<Note>
+Die `{id}` der Website findest du in den Einstellungen der jeweiligen Website (z.B. Website ID: 321).
+</Note>
+
+#### Beispiel für die Anfragen
+
+```javascript curl
+curl --location --request GET 'https://digistats.de/api/v1/websites/{id}' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer {api_key}'
+```
+
+### Speichern
+
+API-Endpunkt:
+
+`POST`
+
+```
+https://digistats.de/api/v1/websites
+```
+
+#### Beispiel für die Anfragen
+
+```javascript curl
+curl --location --request POST 'https://digistats.de/api/v1/websites' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--header 'Authorization: Bearer {api_key}' \
+--data-urlencode 'domain={domain}'
+```
+
+| Parameter       | Typ          | Beschreibung  |
+| :------------- |:-------------| :-------------|
+| `domain`      | `erforderlich` `string` | Die Domain.|
+| `privacy`      | `optional` `integer` | Zugriff auf die Statistik. Mögliche Werte sind: `0` für Öffentlich, `1` für Privat, `2` für Passwort. Standardwert: `1`.|
+| `password`      | `optional` `string` | Das Passwort von der passwortgeschützten Statistik. Funktioniert nur mit `privacy` festgelegt auf den Wert `2`.|
+| `email`      | `optional` `integer` | Erhalte jeweils Monatsende deinen persönlichen Monatsreport mit den Zugriffen auf deine Website. Mögliche Werte sind: `0` für Deaktiviert, `1` für Aktiviert. Standardwert: `0`.|
+| `exclude_bots`      | `optional` `integer` | Suchmaschinen-Bots (auch Robots, Spiders oder User Agents) werden ignoriert. Mögliche Werte sind: `0` für Deaktiviert, `1` für Aktiviert. Standardwert: `1`.|
+| `exclude_params`      | `optional` `string` | Bestimmte URLs vom Tracking ausschliessen. Eine pro Zeile.|
+| `exclude_ips`      | `optional` `string` | Bestimmte IPs vom Tracking ausschliessen. Eine pro Zeile.|
+ 
+### Update
+
+API-Endpunkt:
+
+`PUT` `PATCH`
+
+```
+https://digistats.de/api/api/v1/websites/{id}
+```
+
+<Note>
+Die `{id}` der Website findest du in den Einstellungen der jeweiligen Website (z.B. Website ID: 321).
+</Note>
+
+#### Beispiel für die Anfragen
+
+```javascript curl
+curl --location --request PUT 'https://digistats.de/api/v1/websites/{id}' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--header 'Authorization: Bearer {api_key}'
+```
+
+| Parameter       | Typ          | Beschreibung  |
+| :------------- |:-------------| :-------------|
+| `privacy`      | `erforderlich` `integer` | Zugriff auf die Statistik. Mögliche Werte sind: `0` für Öffentlich, `1` für Privat, `2` für Passwort.|
+| `password`      | `optional` `string` | Das Passwort von der passwortgeschützten Statistik. Funktioniert nur mit `privacy` festgelegt auf den Wert `2`.|
+| `email`      | `optional` `integer` | Erhalte jeweils Monatsende deinen persönlichen Monatsreport mit den Zugriffen auf deine Website. Mögliche Werte sind: `0` für Deaktiviert, `1` für Aktiviert.|
+| `exclude_bots`      | `optional` `integer` | Suchmaschinen-Bots (auch Robots, Spiders oder User Agents) werden ignoriert. Mögliche Werte sind: `0` für Deaktiviert, `1` für Aktiviert.|
+| `exclude_params`      | `optional` `string` | Bestimmte URLs vom Tracking ausschliessen. Eine pro Zeile.|
+| `exclude_ips`      | `optional` `string` | Bestimmte IPs vom Tracking ausschliessen. Eine pro Zeile.|
+
+### Löschen
+
+API-Endpunkt: 
+
+`DELETE`
+
+```
+https://digistats.de/api/v1/websites/{id}
+```
+
+#### Beispiel für die Anfragen
+
+```javascript curl
+curl --location --request DELETE 'https://digistats.de/api/v1/websites/{id}' \
+--header 'Authorization: Bearer {api_key}'
+```
+
+<Warning>
+Alle Daten und alle zugehörigen Inhalte werden unwiderruflich gelöscht.
+</Warning>
