@@ -5,13 +5,11 @@ description: 'Der API-Schlüssel sollte als Bearer-Token im Authorization-Header
 
 ### List
 
-API-Endpunkt:
-
-`GET`
-
-```
+<ParamField path="API-Endpunkt" type="GET">
+  ```
 https://digistats.de/api/v1/websites
 ```
+</ParamField>
 
 #### Beispiel für die Anfragen
 
@@ -31,13 +29,11 @@ curl --location --request GET 'https://digistats.de/api/v1/websites' \
 
 ### Anzeigen
 
-API-Endpunkt:
-
-`GET`
-
-```
+<ParamField path="API-Endpunkt" type="GET">
+  ```
 https://digistats.de/api/v1/websites/{id}
 ```
+</ParamField>
 
 <Note>
 Die `{id}` der Website findest du in den Einstellungen der jeweiligen Website (z.B. Website ID: 321).
@@ -53,13 +49,11 @@ curl --location --request GET 'https://digistats.de/api/v1/websites/{id}' \
 
 ### Speichern
 
-API-Endpunkt:
-
-`POST`
-
-```
+<ParamField path="API-Endpunkt" type="POST">
+  ```
 https://digistats.de/api/v1/websites
 ```
+</ParamField>
 
 #### Beispiel für die Anfragen
 
@@ -82,13 +76,12 @@ curl --location --request POST 'https://digistats.de/api/v1/websites' \
  
 ### Update
 
-API-Endpunkt:
-
-`PUT` `PATCH`
-
-```
+<ParamField path="API-Endpunkt" type="PUT, PATCH">
+  ```
 https://digistats.de/api/api/v1/websites/{id}
 ```
+</ParamField>
+
 
 <Note>
 Die `{id}` der Website findest du in den Einstellungen der jeweiligen Website (z.B. Website ID: 321).
@@ -113,13 +106,11 @@ curl --location --request PUT 'https://digistats.de/api/v1/websites/{id}' \
 
 ### Löschen
 
-API-Endpunkt: 
-
-`DELETE`
-
-```
+<ParamField path="API-Endpunkt" type="DELETE">
+  ```
 https://digistats.de/api/v1/websites/{id}
 ```
+</ParamField>
 
 #### Beispiel für die Anfragen
 
