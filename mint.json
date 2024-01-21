@@ -91,18 +91,9 @@
     {
       "group": "API Dokumentation",
       "pages": [
-        "api-reference/introduction",
         "api-reference/stats",
         "api-reference/website",
         "api-reference/account"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
       ]
     }
   ],
